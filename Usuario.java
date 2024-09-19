@@ -25,7 +25,7 @@ public class Usuario {
         this.rutasPreferidas = rutasPreferidas;
     }
 
-// Método constructor
+// Método Constructor
     public Usuario(String nombre, String password, ArrayList<Ruta> rutasPreferidas) {
         this.nombre = nombre;
         this.password = password;
