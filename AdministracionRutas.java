@@ -47,6 +47,11 @@ public class AdministracionRutas {
         this.horaInicio = horaInicio;
     }
 
+    // Método para crear una ruta
+    public void crearRuta (String punto1, String punto2){
+        
+    }
+
 
     
 
