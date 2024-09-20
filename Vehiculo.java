@@ -22,7 +22,7 @@ public class Vehiculo {
     public double velocidadPromedio() {
         switch (tipoVehiculo) {
             case "Carro":
-                return 80.0; // ejemplo de velocidad promedio en km/h
+                return 60.0; // ejemplo de velocidad promedio en km/h
             case "Moto":
                 return 40.0;
             case "Bicicleta":
