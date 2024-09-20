@@ -19,11 +19,11 @@ public class Vehiculo {
             case "Carro":
                 return 80.0; // ejemplo de velocidad promedio en km/h
             case "Moto":
-                return 50.0;
+                return 40.0;
             case "Bicicleta":
                 return 20.0;
             default:
-                return 0.0; // Si el tipo de vehículo no está definido
+                return 0.0; // Esta opcion es utilizada cuando el tipo de vehiculo no esta definido. 
         }
     }
 }
