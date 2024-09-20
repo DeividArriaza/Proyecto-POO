@@ -1,5 +1,5 @@
 public class Vehiculo {
-    // Declaracion de atributos
+    // Declaración de atributos
     private String tipoVehiculo;
 
     // Gets y Sets

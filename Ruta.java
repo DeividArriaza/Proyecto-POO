@@ -1,5 +1,5 @@
 public class Ruta {
-    // Declaracion de atributos
+    // Declaración de atributos
     private String puntoInicial;
     private String puntoFinal;
 
