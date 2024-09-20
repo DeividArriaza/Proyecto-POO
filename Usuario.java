@@ -7,6 +7,11 @@ public class Usuario {
     private String password;
     private ArrayList<Ruta> rutasPreferidas;
 
+//Constructor
+	public Usuario(){
+		nombre = "";
+		password = "";
+	}
 // Gets & Sets
     public String getNombre() {
         return this.nombre;

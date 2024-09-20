@@ -4,8 +4,15 @@ public class AdministracionRutas {
     private Vehiculo vehiculo;
     private Usuario usuario;
     private String horaInicio;
-
-
+	
+	//Constructor
+	
+	public AdministracionRutas(){
+		ruta = new Ruta();
+		vehiculo = new Vehiculo();
+		usuario = new Usuario();
+		horaInicio = "0:00";
+	}
     // Gets y Sets
     public Ruta getRuta() {
         return this.ruta;

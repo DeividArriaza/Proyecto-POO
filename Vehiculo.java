@@ -3,6 +3,9 @@ public class Vehiculo {
     private String tipoVehiculo;
 
 	// Método constructor
+	public void setTipoVehiculo() {
+        tipoVehiculo = "Carro";
+    }
     public void setTipoVehiculo(String tipoVehiculo) {
         this.tipoVehiculo = tipoVehiculo;
     }
