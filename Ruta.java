@@ -1,12 +1,15 @@
 public class Ruta {
+    // Declaracion de atributos
     private String puntoInicial;
     private String puntoFinal;
 
+    // Método constructor
     public Ruta(String puntoInicial, String puntoFinal) {
         this.puntoInicial = puntoInicial;
         this.puntoFinal = puntoFinal;
     }
 
+    // Gets y Sets
     public String getPuntoInicial() {
         return puntoInicial;
     }
