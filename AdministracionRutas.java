@@ -62,6 +62,41 @@ public class AdministracionRutas {
 
     }
 
+    // Método para cambiar nombre
+    public void cambiarNombre(){
+
+    }
+
+    // Método para cambiar contraseña
+    public void cambiarContrasena(){
+
+    }
+
+    // Método para elegir ruta disponible
+    public void elegirRutaDisponible(int ruta){
+
+    }
+
+    // Método para mostrar rutas
+    public void mostrarRutas(){
+
+    }
+
+    // Método para mostrar rutas disponibles
+    public void mostrarRutasFavoritas(){
+
+    }
+
+    // Método para calcular el tiempo estimado
+    public double tiempoEstimado(){
+
+    }
+
+    // Método para calcular el tráfico estimado
+    public double traficoEstimado(){
+        
+    }
+
 
     
 
