@@ -1,6 +1,8 @@
 public class Vehiculo {
+    // Declaracion de atributos
     private String tipoVehiculo;
 
+    // Gets y Sets
     public Vehiculo(String tipoVehiculo) {
         this.tipoVehiculo = tipoVehiculo;
     }
@@ -9,6 +11,7 @@ public class Vehiculo {
         return tipoVehiculo;
     }
 
+    // Método constructor
     public void setTipoVehiculo(String tipoVehiculo) {
         this.tipoVehiculo = tipoVehiculo;
     }
