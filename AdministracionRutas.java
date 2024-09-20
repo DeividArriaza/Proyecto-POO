@@ -1,10 +1,12 @@
 public class AdministracionRutas {
+    // Declaración de atributos
     private Ruta ruta;
     private Vehiculo vehiculo;
     private Usuario usuario;
     private String horaInicio;
 
 
+    // Gets y Sets
     public Ruta getRuta() {
         return this.ruta;
     }
@@ -37,6 +39,7 @@ public class AdministracionRutas {
         this.horaInicio = horaInicio;
     }
 
+    // Método constructor
     public AdministracionRutas(Ruta ruta, Vehiculo vehiculo, Usuario usuario, String horaInicio) {
         this.ruta = ruta;
         this.vehiculo = vehiculo;
