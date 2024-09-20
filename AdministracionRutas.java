@@ -37,6 +37,14 @@ public class AdministracionRutas {
         this.horaInicio = horaInicio;
     }
 
+    public AdministracionRutas(Ruta ruta, Vehiculo vehiculo, Usuario usuario, String horaInicio) {
+        this.ruta = ruta;
+        this.vehiculo = vehiculo;
+        this.usuario = usuario;
+        this.horaInicio = horaInicio;
+    }
+
+
     
 
 }
