@@ -48,7 +48,7 @@ public class Main{
                             try {
                                 opcionGo = Integer.parseInt(scanner.nextLine());
                                 if (opcionGo == 1){
-                                    adminRutas.mostrarRutas();
+                                    //adminRutas.mostrarRutas();
                                 } 
 								else if (opcionGo == 2){
                                     System.out.println("Mostrando tráfico...");
