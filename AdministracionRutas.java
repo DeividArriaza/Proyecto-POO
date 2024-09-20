@@ -48,8 +48,18 @@ public class AdministracionRutas {
     }
 
     // Método para crear una ruta
-    public void crearRuta (String punto1, String punto2){
-        
+    public void crearRuta(String punto1, String punto2){
+
+    }
+
+    // Método para crear un vehículo
+    public void crearUsuario(String punto){
+
+    }
+
+    // Método para verificar si un usuario existe
+    public boolean existeUsuario(){
+
     }
 
 
