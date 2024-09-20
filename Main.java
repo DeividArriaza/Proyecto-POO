@@ -39,7 +39,7 @@ public class Main{
                         int opcionGo = 0;
                         while (opcionGo != 5) {  // Control del submenú 'Go'
                             System.out.println("\n--- GO ---");
-                            System.out.println("1. Ver rutas disponibles");
+                            System.out.println("1. Consultar las rutas disponibles");
                             System.out.println("2. Mostrar tráfico");
                             System.out.println("3. Ver tiempo estimado");
                             System.out.println("4. Ver rutas favoritas");
