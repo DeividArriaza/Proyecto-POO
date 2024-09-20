@@ -4,6 +4,11 @@ public class Ruta {
     private String puntoFinal;
 
     // Método constructor
+	public Ruta(){
+		puntoInicial = "Zona 16";
+		puntoFinal = "Zona 16";
+	}
+	
     public Ruta(String puntoInicial, String puntoFinal) {
         this.puntoInicial = puntoInicial;
         this.puntoFinal = puntoFinal;

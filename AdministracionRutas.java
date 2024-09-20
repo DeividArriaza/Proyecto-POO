@@ -46,7 +46,8 @@ public class AdministracionRutas {
         this.usuario = usuario;
         this.horaInicio = horaInicio;
     }
-
+	
+	/*
     // Método para crear una ruta
     public void crearRuta(String punto1, String punto2){
 
@@ -96,7 +97,7 @@ public class AdministracionRutas {
     public double traficoEstimado(){
         
     }
-
+	*/
 
     
 

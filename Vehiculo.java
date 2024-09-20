@@ -2,6 +2,10 @@ public class Vehiculo {
     // Declaración de atributos
     private String tipoVehiculo;
 
+	// Método constructor
+    public void setTipoVehiculo(String tipoVehiculo) {
+        this.tipoVehiculo = tipoVehiculo;
+    }
     // Gets y Sets
     public Vehiculo(String tipoVehiculo) {
         this.tipoVehiculo = tipoVehiculo;
@@ -9,11 +13,6 @@ public class Vehiculo {
 
     public String getTipoVehiculo() {
         return tipoVehiculo;
-    }
-
-    // Método constructor
-    public void setTipoVehiculo(String tipoVehiculo) {
-        this.tipoVehiculo = tipoVehiculo;
     }
 
     // Método para obtener la velocidad promedio
