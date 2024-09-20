@@ -3,7 +3,7 @@ public class Vehiculo {
     private String tipoVehiculo;
 
 	// Método constructor
-	public void setTipoVehiculo() {
+	public Vehiculo() {
         tipoVehiculo = "Carro";
     }
     public void setTipoVehiculo(String tipoVehiculo) {

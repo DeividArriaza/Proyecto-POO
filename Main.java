@@ -34,7 +34,7 @@ public class Main{
                     String contrasena = scanner.nextLine();
 
                     Usuario usuario = adminRutas.getUsuario();  // Obtén el usuario registrado
-                    if (usuario != null && usuario.getNombre().equals(nombre) && usuario.getContrasena().equals(contrasena)) {
+                    if (usuario != null && usuario.getNombre().equals(nombre) && usuario.getPassword().equals(contrasena)) {
                         System.out.println("Bienvenido " + nombre + "!");
                         int opcionGo = 0;
                         while (opcionGo != 5) {  // Control del submenú 'Go'
@@ -48,19 +48,19 @@ public class Main{
                             try {
                                 opcionGo = Integer.parseInt(scanner.nextLine());
                                 if (opcionGo == 1){
-                                    adminRutas.mostrarRutasDisponibles();
+                                    adminRutas.mostrarRutas();
                                 } 
 								else if (opcionGo == 2){
                                     System.out.println("Mostrando tráfico...");
-                                    // Lógica para mostrar tráfico
+                                    // Implementar Lógica para mostrar tráfico
                                 }
 								else if (opcionGo == 3){
                                     System.out.println("Mostrando tiempo estimado...");
-                                    // Lógica para mostrar tiempo estimado
+                                    // Implementar Lógica para mostrar tiempo estimado
                                 } 
 								else if (opcionGo == 4){
                                     System.out.println("Mostrando rutas favoritas...");
-                                    // Lógica para mostrar rutas favoritas
+                                    // Implementar ------------------Lógica para mostrar rutas favoritas
                                 } 
 								else if (opcionGo != 5){
                                     System.out.println("Opción no válida.");

@@ -31,7 +31,7 @@ public class AdministracionRutas {
     }
 
     public Usuario getUsuario() {
-        return this.usuario;
+        return usuario;
     }
 
     public void setUsuario(Usuario usuario) {
@@ -54,6 +54,11 @@ public class AdministracionRutas {
         this.horaInicio = horaInicio;
     }
 	
+	public void crearUsuario(String nombre, String password){
+		usuario.setNombre(nombre);
+		usuario.setPassword(password);
+	}
+
 	/*
     // Método para crear una ruta
     public void crearRuta(String punto1, String punto2){
