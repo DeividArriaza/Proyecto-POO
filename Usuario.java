@@ -1,6 +1,8 @@
+// Importe de librería para utilizar Arrays
 import java.util.ArrayList;
+
 public class Usuario {
-// Atributos
+// Declaración de atributos
     private String nombre;
     private String password;
     private ArrayList<Ruta> rutasPreferidas;
@@ -25,7 +27,7 @@ public class Usuario {
         this.rutasPreferidas = rutasPreferidas;
     }
 
-// Método Constructor
+// Método constructor
     public Usuario(String nombre, String password, ArrayList<Ruta> rutasPreferidas) {
         this.nombre = nombre;
         this.password = password;
