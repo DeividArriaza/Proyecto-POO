@@ -1,8 +1,12 @@
+import javax.swing.*;  // Librerías para la interfaz gráfica
+import java.awt.*;      // Para manejar componentes de interfaz como layouts y colores
+import java.awt.event.ActionEvent;  // Para manejar eventos de los botones
+import java.awt.event.ActionListener;  // Listener para eventos de acción (clics de botones)
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main{
+public class Main extends JFrame {
 
     public static void main(String[] args) {
         AdministracionRutas adminRutas = new AdministracionRutas();
