@@ -1,20 +1,14 @@
 public class Ruta {
-    // Declaración de atributos
+    // Atributos
     private String puntoInicial;
     private String puntoFinal;
 
-    // Método constructor
-	public Ruta(){
-		puntoInicial = "Zona 16";
-		puntoFinal = "Zona 16";
-	}
-	
     public Ruta(String puntoInicial, String puntoFinal) {
         this.puntoInicial = puntoInicial;
         this.puntoFinal = puntoFinal;
     }
 
-    // Gets y Sets
+    // gets y sets
     public String getPuntoInicial() {
         return puntoInicial;
     }
@@ -31,23 +25,23 @@ public class Ruta {
         this.puntoFinal = puntoFinal;
     }
 
-    // Método para obtener rutas disponibles
+    // Rutas disponibles
     public String[] rutasDisponibles() {
         String[] rutas = {"Ruta1", "Ruta2", "Ruta3"};
         return rutas;
     }
 
-    // Método para calcular la distancia de una ruta
+    // Calcular la distancia de una ruta
     public double distancia(String elegirRutaDisponible) {
         switch (elegirRutaDisponible) {
             case "Ruta1":
-                return 10.5; // Distancia en kilómetros, por ejemplo
+                return 10.5; // ejemplo de una distancia
             case "Ruta2":
                 return 15.0;
             case "Ruta3":
                 return 7.8;
             default:
-                return 0.0; // Si la ruta no está en la lista
+                return 0.0; // Si la ruta no existe en la lista de opciones. 
         }
     }
 }
