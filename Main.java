@@ -23,5 +23,12 @@ public class Main extends JFrame {
           // Usar CardLayout para gestionar los diferentes paneles
         cardLayout = new CardLayout();  // Inicializa el CardLayout
         mainPanel = new JPanel(cardLayout);  // Panel principal que contendrá las diferentes pantallas
+
+        // Pantalla del menú principal
+        JPanel menuPanel = new JPanel();  // Panel para el menú principal
+        menuPanel.setLayout(new GridLayout(3, 1));  // Organiza los botones en 3 filas
+        JButton signUpButton = new JButton("Sign Up");  // Botón para "Sign Up"
+        JButton signInButton = new JButton("Sign In");  // Botón para "Sign In"
+        JButton exitButton = new JButton("Salir");      // Botón para salir de la aplicación
     }
 }
