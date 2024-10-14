@@ -13,4 +13,10 @@ public class Main extends JFrame {
     public Main() {
         initUI();  // Método que inicializa la interfaz gráfica
     }
-
+    private void initUI() {
+         // Configura la ventana principal
+         setTitle("Administración de Rutas");  // Título de la ventana
+         setSize(400, 300);                    // Tamaño de la ventana
+         setDefaultCloseOperation(EXIT_ON_CLOSE);  // Comportamiento al cerrar la ventana
+         setLocationRelativeTo(null);          // Centra la ventana en la pantalla
+    }
