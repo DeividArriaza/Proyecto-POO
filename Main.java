@@ -19,4 +19,9 @@ public class Main extends JFrame {
          setSize(400, 300);                    // Tamaño de la ventana
          setDefaultCloseOperation(EXIT_ON_CLOSE);  // Comportamiento al cerrar la ventana
          setLocationRelativeTo(null);          // Centra la ventana en la pantalla
+
+          // Usar CardLayout para gestionar los diferentes paneles
+        cardLayout = new CardLayout();  // Inicializa el CardLayout
+        mainPanel = new JPanel(cardLayout);  // Panel principal que contendrá las diferentes pantallas
     }
+}
