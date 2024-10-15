@@ -30,5 +30,10 @@ public class Main extends JFrame {
         JButton signUpButton = new JButton("Sign Up");  // Botón para "Sign Up"
         JButton signInButton = new JButton("Sign In");  // Botón para "Sign In"
         JButton exitButton = new JButton("Salir");      // Botón para salir de la aplicación
+
+        // Acciones de los botones del menú principal
+        signUpButton.addActionListener(e -> cardLayout.show(mainPanel, "signupPanel"));  // Muestra el panel de "Sign Up"
+        signInButton.addActionListener(e -> cardLayout.show(mainPanel, "signinPanel"));  // Muestra el panel de "Sign In"
+        exitButton.addActionListener(e -> System.exit(0));  // Sale de la aplicación
     }
 }
