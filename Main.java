@@ -41,6 +41,13 @@ public class Main extends JFrame {
         menuPanel.add(signInButton);
         menuPanel.add(exitButton);
 
+        // Pantalla de Registro de usuario llamada sing up 
+        JPanel signupPanel = new JPanel(new GridLayout(3, 2));  // Panel con 3 filas y 2 columnas
+        usernameField = new JTextField();  // Campo de texto para ingresar el nombre de usuario
+        passwordField = new JPasswordField();  // Campo de texto para ingresar la contraseña
+        JButton signupConfirmButton = new JButton("Registrarse");  // Botón para confirmar el registro
+        JButton signupBackButton = new JButton("Volver");  // Botón para volver al menú principal
+
 
     }
 }
