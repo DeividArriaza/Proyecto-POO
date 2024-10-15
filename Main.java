@@ -59,5 +59,12 @@ public class Main extends JFrame {
         // Acciones de Sign Up por el momento
         signupBackButton.addActionListener(e -> cardLayout.show(mainPanel, "menuPanel"));  // Vuelve al menú principal
 
+        // Pantalla de Sign In / Inicio de sesión
+        JPanel signinPanel = new JPanel(new GridLayout(3, 2));  // Panel con 3 filas y 2 columnas
+        JTextField signinUsernameField = new JTextField();  // Campo de texto para el nombre de usuario
+        JPasswordField signinPasswordField = new JPasswordField();  // Campo de texto para la contraseña
+        JButton signinConfirmButton = new JButton("Iniciar Sesión");  // Botón para iniciar sesión
+        JButton signinBackButton = new JButton("Volver");  // Botón para volver al menú principal
+
     }
 }
