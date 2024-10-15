@@ -48,6 +48,14 @@ public class Main extends JFrame {
         JButton signupConfirmButton = new JButton("Registrarse");  // Botón para confirmar el registro
         JButton signupBackButton = new JButton("Volver");  // Botón para volver al menú principal
 
+        // Añadir etiquetas y campos de entrada al panel de "Sign Up"
+        signupPanel.add(new JLabel("Nombre de usuario:"));
+        signupPanel.add(usernameField);
+        signupPanel.add(new JLabel("Contraseña:"));
+        signupPanel.add(passwordField);
+        signupPanel.add(signupConfirmButton);
+        signupPanel.add(signupBackButton);
+
 
     }
 }
