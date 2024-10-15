@@ -66,5 +66,13 @@ public class Main extends JFrame {
         JButton signinConfirmButton = new JButton("Iniciar Sesión");  // Botón para iniciar sesión
         JButton signinBackButton = new JButton("Volver");  // Botón para volver al menú principal
 
+        // Añadir etiquetas y campos de entrada al panel de "Sign In"
+        signinPanel.add(new JLabel("Nombre de usuario:"));
+        signinPanel.add(signinUsernameField);
+        signinPanel.add(new JLabel("Contraseña:"));
+        signinPanel.add(signinPasswordField);
+        signinPanel.add(signinConfirmButton);
+        signinPanel.add(signinBackButton);
+
     }
 }
