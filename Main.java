@@ -77,5 +77,14 @@ public class Main extends JFrame {
         // Acciones de Sign In hasta el momento:
         signinBackButton.addActionListener(e -> cardLayout.show(mainPanel, "menuPanel"));  // Vuelve al menú principal
 
+         // Añadir todos los paneles al panel principal (mainPanel) usando el CardLayout
+         mainPanel.add(menuPanel, "menuPanel");  // Menú principal
+         mainPanel.add(signupPanel, "signupPanel");  // Pantalla de Sign Up
+         mainPanel.add(signinPanel, "signinPanel");  // Pantalla de Sign In
+ 
+         // Muestra el menú principal al iniciar la aplicación
+         add(mainPanel);  // Añadir el panel principal al JFrame
+         cardLayout.show(mainPanel, "menuPanel");  // Mostrar el menú principal
+
     }
 }
