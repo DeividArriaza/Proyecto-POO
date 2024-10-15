@@ -56,6 +56,8 @@ public class Main extends JFrame {
         signupPanel.add(signupConfirmButton);
         signupPanel.add(signupBackButton);
 
+        // Acciones de Sign Up por el momento
+        signupBackButton.addActionListener(e -> cardLayout.show(mainPanel, "menuPanel"));  // Vuelve al menú principal
 
     }
 }
