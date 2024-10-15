@@ -74,5 +74,8 @@ public class Main extends JFrame {
         signinPanel.add(signinConfirmButton);
         signinPanel.add(signinBackButton);
 
+        // Acciones de Sign In hasta el momento:
+        signinBackButton.addActionListener(e -> cardLayout.show(mainPanel, "menuPanel"));  // Vuelve al menú principal
+
     }
 }
