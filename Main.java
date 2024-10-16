@@ -67,11 +67,11 @@ public class Main extends JFrame {
 				JOptionPane.showMessageDialog(this, "Por favor ingresa ambos campos.");
 			} else {
 				// Guardar los datos en un archivo CSV
-				try (FileWriter writer = new FileWriter("usuarios.csv", true)) {  // Modo "append" para añadir líneas
-					writer.append(username).append(",").append(password).append("\n");
+				try (FileWriter writer = new FileWriter("usuarios.csv", true)) {  // "append" para añadir líneas
+					writer.append(username).append(",").append(password).append("\n"); //se añade el usuario y contraseña, separdos por una , para separares en el .csv
 					writer.flush();
-					JOptionPane.showMessageDialog(this, "Usuario registrado exitosamente.");
-				} catch (IOException ex) {
+					JOptionPane.showMessageDialog(this, "Usuario registrado exitosamente."); //se muestra el usuario que se ha registrado correctamente
+				} catch (IOException ex) { //por si hay un error de entrada o salida al guardar los datos
 					ex.printStackTrace();
 					JOptionPane.showMessageDialog(this, "Error al guardar los datos.");
 				}
@@ -94,7 +94,45 @@ public class Main extends JFrame {
         signinPanel.add(signinPasswordField);
         signinPanel.add(signinConfirmButton);
         signinPanel.add(signinBackButton);
+		
+		signinConfirmButton.addActionListener(e -> {
+			String username = signinUsernameField.getText();          // Obtener el nombre de usuario ingresado
+			String password = new String(signinPasswordField.getPassword());  // Obtener la contraseña ingresada
 
+			// Validar que si se ingrese un usuario y contraseña
+			if (username.isEmpty() || password.isEmpty()) {
+				JOptionPane.showMessageDialog(this, "Por favor ingresa ambos campos.");
+			} else {
+				// Leer el archivo CSV y comprobar los datos
+				try (BufferedReader reader = new BufferedReader(new FileReader("usuarios.csv"))) {
+					String line;
+					boolean found = false;
+
+					// Leer línea por línea
+					while ((line = reader.readLine()) != null) {
+						String[] userData = line.split(",");  // Separar la línea en nombre de usuario y contraseña 
+						String storedUsername = userData[0];  // Nombre de usuario guardado
+						String storedPassword = userData[1];  // Contraseña guardada
+
+						// Comparar el nombre de usuario y la contraseña
+						if (username.equals(storedUsername) && password.equals(storedPassword)) {
+							found = true;
+						}
+					}
+
+					// Mostrar mensajes según si el usuario fue encontrado o no
+					if (found) {
+						JOptionPane.showMessageDialog(this, "Inicio de sesión exitoso.");
+					} else {
+						JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrectos.");
+					}
+
+				} catch (IOException ex) {
+					ex.printStackTrace();
+					JOptionPane.showMessageDialog(this, "Error al leer los datos.");
+				}
+			}
+		});
         // Acciones de Sign In hasta el momento:
         signinBackButton.addActionListener(e -> cardLayout.show(mainPanel, "menuPanel"));  // Vuelve al menú principal
 		
