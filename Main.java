@@ -85,6 +85,13 @@ public class Main extends JFrame {
          // Muestra el menú principal al iniciar la aplicación
          add(mainPanel);  // Añadir el panel principal al JFrame
          cardLayout.show(mainPanel, "menuPanel");  // Mostrar el menú principal
+    }
 
+    public static void main(String[] args) {
+        // Ejecuta la interfaz gráfica en el hilo de eventos de Swing
+        EventQueue.invokeLater(() -> {
+            Main ex = new Main();  // Crea una instancia de la aplicación
+            ex.setVisible(true);  // Hace visible la ventana
+        });
     }
 }
