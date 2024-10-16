@@ -127,7 +127,7 @@ public class Main extends JFrame {
 						JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrectos.");
 					}
 
-				} catch (IOException ex) {
+				} catch (IOException ex) { //Por si ocurre un error en la entrada o salida
 					ex.printStackTrace();
 					JOptionPane.showMessageDialog(this, "Error al leer los datos.");
 				}
