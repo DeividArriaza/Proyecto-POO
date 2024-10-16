@@ -25,7 +25,8 @@ public class Main{
                     System.out.print("Ingrese una contraseña: ");
                     String contrasena = scanner.nextLine();
                     adminRutas.crearUsuario(nombre, contrasena);
-                } else if (opcion == 2) {
+                } 
+				else if (opcion == 2) {
                     // Sign In
                     System.out.println("\n--- SIGN IN ---");
                     System.out.print("Ingrese su nombre de usuario: ");
@@ -48,7 +49,7 @@ public class Main{
                             try {
                                 opcionGo = Integer.parseInt(scanner.nextLine());
                                 if (opcionGo == 1){
-                                    adminRutas.mostrarRutas();
+                                    //adminRutas.mostrarRutas(); 
                                 } 
 								else if (opcionGo == 2){
                                     System.out.println("Mostrando tráfico...");
@@ -83,6 +84,6 @@ public class Main{
                 System.out.println("Error: Debe ingresar un número válido.");
             }
         }
-        System.out.println("Gracias por usar la aplicación. ¡Hasta luego!");
+        System.out.println("Gracias por usar la aplicación");
     }
 }

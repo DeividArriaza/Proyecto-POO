@@ -60,6 +60,12 @@ public class AdministracionRutas {
 	}
 
 	/*
+	
+	// Método para mostrar rutas
+    public void mostrarRutas(){
+
+    }
+	
     // Método para crear una ruta
     public void crearRuta(String punto1, String punto2){
 
@@ -90,11 +96,6 @@ public class AdministracionRutas {
 
     }
 
-    // Método para mostrar rutas
-    public void mostrarRutas(){
-
-    }
-
     // Método para mostrar rutas disponibles
     public void mostrarRutasFavoritas(){
 
@@ -110,7 +111,5 @@ public class AdministracionRutas {
         
     }
 	*/
-
-    
 
 }
