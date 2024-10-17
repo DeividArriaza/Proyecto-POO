@@ -36,6 +36,10 @@ public class MapService {
         public String getDistance() {
             return distance;
         }
+
+        public String getStatus() {
+            return status;
+        }
     }
 
     
