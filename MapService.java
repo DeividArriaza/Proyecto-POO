@@ -22,6 +22,12 @@ public class MapService {
         private final String duration; //duracion del recorrido desde el punto inicio a finla
         private final String distance; //distancia total recorrid 
         private final String status; //estado de la respuesta de la api, "OK" si se obtuvo una respuesta adecuada, de lo contrario ocurrió un error
+
+        public RouteInfo(String duration, String distance, String status) {
+            this.duration = duration;
+            this.distance = distance;
+            this.status = status;
+        }
     }
 
     
