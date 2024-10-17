@@ -63,6 +63,12 @@ public class MapService {
         if (!statusMatcher.find() || !"OK".equals(statusMatcher.group(1))) { //Para no mostrar un error al usuario, en caso el estado de la respuesta sea diferente de 'OK' por parte de la api, se crean parametros predeterminados para RouteInfo
         return new RouteInfo("N/A", "N/A", "Error");
     }
+     
+    // Obtener la duración
+     Pattern durationPattern = Pattern.compile("\"duration\"\\s*:\\s*\\{\\s*\"text\"\\s*:\\s*\"([^\"]+)\"");
+     Matcher durationMatcher = durationPattern.matcher(responseStr); //Usando matcher se obtiene durationPattern con su respectivo string
+     String duration = durationMatcher.find() ? durationMatcher.group(1) : "N/A"; //El operador ? funciona como un if y else en caso no se encuentre la duración se muestra "n/a", de lo contrario se muestra el valor obtenido
+
 
     
 }
