@@ -50,5 +50,9 @@ public class MapService {
     //Se construye la url que será enviada a la "request" del http
     String urlStr = String.format("%s?origins=%s&destinations=%s&key=%s", BASE_URL, encodedOrigin, encodedDestination, API_KEY);
 
+     //Crear y enviar la solicitud HTTP
+     HttpRequest request = HttpRequest.newBuilder().uri(URI.create(urlStr)).GET().build();
+     HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString()); //Esta respuesta es una cadena de texto que necesita ser dividida
+
     
 }
