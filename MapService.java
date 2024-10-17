@@ -18,5 +18,9 @@ public class MapService {
         this.httpClient = HttpClient.newBuilder().build(); //Se construye el cliente http que permtiráhacer el response
     }
 
+    public class RouteInfo {
+        
+    }
+
     
 }
