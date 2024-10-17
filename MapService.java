@@ -28,6 +28,10 @@ public class MapService {
             this.distance = distance;
             this.status = status;
         }
+        
+        public String getDuration() {
+            return duration;
+        }
     }
 
     
