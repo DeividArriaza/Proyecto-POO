@@ -159,5 +159,49 @@ public class ControlPanel extends JFrame {
         routePanel.add(routeConfirmButton);
         routePanel.add(routeBackButton);
 
-        
+        // Acción para obtener la ruta
+        routeConfirmButton.addActionListener(e -> {
+			String origin = originField.getText();
+			String destination = destinationField.getText();
+
+			if (origin.isEmpty() || destination.isEmpty()) {
+				JOptionPane.showMessageDialog(this, "Por favor ingresa ambos campos.");
+			} else {
+				try {
+					MapService.RouteInfo routeInfo = mapService.getRouteInfo(origin, destination);
+					
+					if ("OK".equals(routeInfo.getStatus())) {
+						String message = String.format(
+							"Información de la ruta:\n" +
+							"Distancia: %s\n" +
+							"Tiempo estimado: %s",
+							routeInfo.getDistance(),
+							routeInfo.getDuration()
+						);
+						JOptionPane.showMessageDialog(this, message);
+					} else { //EN caso no se encuentre la ruta
+						JOptionPane.showMessageDialog(this, "No se pudo encontrar la ruta. Estado: " + routeInfo.getStatus(), "Error", JOptionPane.ERROR_MESSAGE);
+					}
+				} catch (Exception ex) { //Cualquier otro tipo de error 
+					ex.printStackTrace();
+					JOptionPane.showMessageDialog(this, "Error al obtener la ruta: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+				}
+			}
+		});
+
+        // Acción para volver al menú principal desde la pantalla de rutas
+        routeBackButton.addActionListener(e -> cardLayout.show(mainPanel, "menuPanel"));
+
+        // Añadir todos los paneles al panel principal
+        mainPanel.add(menuPanel, "menuPanel");
+        mainPanel.add(signupPanel, "signupPanel");
+        mainPanel.add(signinPanel, "signinPanel");
+        mainPanel.add(routePanel, "routePanel");
+
+        // Añadir el panel principal a la ventana
+        add(mainPanel);
+
+        // Mostrar el menú principal inicialmente
+        cardLayout.show(mainPanel, "menuPanel");
+    }
 }
