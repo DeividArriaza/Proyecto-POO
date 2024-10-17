@@ -54,5 +54,11 @@ public class MapService {
      HttpRequest request = HttpRequest.newBuilder().uri(URI.create(urlStr)).GET().build();
      HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString()); //Esta respuesta es una cadena de texto que necesita ser dividida
 
+     String responseStr = response.body();
+        
+        //Obtener el status general
+        Pattern statusPattern = Pattern.compile("\"status\"\\s*:\\s*\"([^\"]+)\"");
+        Matcher statusMatcher = statusPattern.matcher(responseStr);
+
     
 }
