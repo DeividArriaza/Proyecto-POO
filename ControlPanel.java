@@ -15,7 +15,7 @@ public class ControlPanel extends JFrame {
 	private MapService mapService;			 // Se llama a la clase que tiene acceso a la API
 
     public ControlPanel() { //Metodo constructor
-		mapService = new MapService("AQUI VA LA API");
+		mapService = new MapService("AIzaSyC2Iql41jg8d7hT0uNxendWvwnvNcUqsLA");
         initUI();  // Método que inicializa la interfaz gráfica
     }
  private void initUI() {
