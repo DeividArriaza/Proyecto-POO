@@ -10,5 +10,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.time.Duration;
 public class MapService {
+    private final String API_KEY;
+    private static final String BASE_URL = "https://maps.googleapis.com/maps/api/distancematrix/json"; //Esto es para conectar con la URL de la API de distancematrix de googleApis
+    private final HttpClient httpClient; //debido a que la respuesta de la api es de manera HTTP, como si fuera para usar con HTML, se necesita un cliente de este servicio que conecte con HTTP
     
 }
