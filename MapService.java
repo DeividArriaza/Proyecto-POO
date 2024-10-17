@@ -69,6 +69,11 @@ public class MapService {
      Matcher durationMatcher = durationPattern.matcher(responseStr); //Usando matcher se obtiene durationPattern con su respectivo string
      String duration = durationMatcher.find() ? durationMatcher.group(1) : "N/A"; //El operador ? funciona como un if y else en caso no se encuentre la duración se muestra "n/a", de lo contrario se muestra el valor obtenido
 
+     // Obtener la distancia
+     Pattern distancePattern = Pattern.compile("\"distance\"\\s*:\\s*\\{\\s*\"text\"\\s*:\\s*\"([^\"]+)\"");
+     Matcher distanceMatcher = distancePattern.matcher(responseStr);
+     String distance = distanceMatcher.find() ? distanceMatcher.group(1) : "N/A"; //El operador ? funciona como un if y else en caso no se encuentre la duración se muestra "n/a", de lo contrario se muestra el valor obtenido
 
-    
+     return new RouteInfo(duration, distance, "OK"); //En caso es cumpla con tener el estado correcto de la API, se devuelve el 
+    }   
 }
