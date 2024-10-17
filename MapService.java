@@ -19,7 +19,9 @@ public class MapService {
     }
 
     public class RouteInfo {
-        
+        private final String duration; //duracion del recorrido desde el punto inicio a finla
+        private final String distance; //distancia total recorrid 
+        private final String status; //estado de la respuesta de la api, "OK" si se obtuvo una respuesta adecuada, de lo contrario ocurrió un error
     }
 
     
