@@ -99,5 +99,65 @@ public class ControlPanel extends JFrame {
         signinPanel.add(signinPasswordField);
         signinPanel.add(signinConfirmButton);
         signinPanel.add(signinBackButton);
+		
+		// Acción para validar las credenciales y acceder a la pantalla de rutas
+        signinConfirmButton.addActionListener(e -> {
+            String username = signinUsernameField.getText();          // Obtener el nombre de usuario ingresado
+            String password = new String(signinPasswordField.getPassword());  // Obtener la contraseña ingresada
 
+            // Validar que ambos campos no estén vacíos
+            if (username.isEmpty() || password.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Por favor ingresa ambos campos.");
+            } else {
+                // Leer el archivo CSV y comprobar los datos
+                try (BufferedReader reader = new BufferedReader(new FileReader("usuarios.csv"))) {
+                    String line;
+                    boolean found = false;
+
+                    // Leer línea por línea
+                    while ((line = reader.readLine()) != null) {
+                        String[] userData = line.split(",");  // Separar la línea en nombre de usuario y contraseña
+                        String storedUsername = userData[0];  // Nombre de usuario guardado
+                        String storedPassword = userData[1];  // Contraseña guardada
+
+                        // Comparar el nombre de usuario y la contraseña
+                        if (username.equals(storedUsername) && password.equals(storedPassword)) {
+                            found = true;
+                            break;
+                        }
+                    }
+
+                    // Mostrar mensaje según si el usuario fue encontrado o no
+                    if (found) {
+                        cardLayout.show(mainPanel, "routePanel");  // Mostrar la pantalla de rutas
+                    } else {
+                        JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrectos.");
+                    }
+
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                    JOptionPane.showMessageDialog(this, "Error al leer los datos.");
+                }
+            }
+        });
+
+        // Acciones de volver al menú principal
+        signinBackButton.addActionListener(e -> cardLayout.show(mainPanel, "menuPanel"));  // Vuelve al menú principal
+
+        // Pantalla para ingresar origen y destino (pantalla de rutas)
+        JPanel routePanel = new JPanel(new GridLayout(4, 2));  // Panel para ingresar origen y destino
+        originField = new JTextField();  // Campo de texto para el origen
+        destinationField = new JTextField();  // Campo de texto para el destino
+        JButton routeConfirmButton = new JButton("Obtener Ruta");  // Botón para obtener la ruta
+        JButton routeBackButton = new JButton("Volver");  // Botón para volver al menú principal
+
+        // Añadir etiquetas y campos de entrada al panel de rutas
+        routePanel.add(new JLabel("Origen:"));
+        routePanel.add(originField);
+        routePanel.add(new JLabel("Destino:"));
+        routePanel.add(destinationField);
+        routePanel.add(routeConfirmButton);
+        routePanel.add(routeBackButton);
+
+        
 }
