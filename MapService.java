@@ -60,5 +60,9 @@ public class MapService {
         Pattern statusPattern = Pattern.compile("\"status\"\\s*:\\s*\"([^\"]+)\"");
         Matcher statusMatcher = statusPattern.matcher(responseStr);
 
+        if (!statusMatcher.find() || !"OK".equals(statusMatcher.group(1))) { //Para no mostrar un error al usuario, en caso el estado de la respuesta sea diferente de 'OK' por parte de la api, se crean parametros predeterminados para RouteInfo
+        return new RouteInfo("N/A", "N/A", "Error");
+    }
+
     
 }
