@@ -15,7 +15,7 @@ public class ControlPanel extends JFrame {
 	private MapService mapService;			 // Se llama a la clase que tiene acceso a la API
 
     public ControlPanel() { //Metodo constructor
-		mapService = new MapService("AIzaSyC2Iql41jg8d7hT0uNxendWvwnvNcUqsLA");
+		mapService = new MapService("AQUI VA LA API");
         initUI();  // Método que inicializa la interfaz gráfica
     }
  private void initUI() {
@@ -171,13 +171,7 @@ public class ControlPanel extends JFrame {
 					MapService.RouteInfo routeInfo = mapService.getRouteInfo(origin, destination);
 					
 					if ("OK".equals(routeInfo.getStatus())) {
-						String message = String.format(
-							"Información de la ruta:\n" +
-							"Distancia: %s\n" +
-							"Tiempo estimado: %s",
-							routeInfo.getDistance(),
-							routeInfo.getDuration()
-						);
+						String message = String.format("Información de la ruta:\n" + "Distancia: %s\n" + "Tiempo estimado: %s", routeInfo.getDistance(), routeInfo.getDuration());
 						JOptionPane.showMessageDialog(this, message);
 					} else { //EN caso no se encuentre la ruta
 						JOptionPane.showMessageDialog(this, "No se pudo encontrar la ruta. Estado: " + routeInfo.getStatus(), "Error", JOptionPane.ERROR_MESSAGE);
