@@ -32,6 +32,10 @@ public class MapService {
         public String getDuration() {
             return duration;
         }
+
+        public String getDistance() {
+            return distance;
+        }
     }
 
     
