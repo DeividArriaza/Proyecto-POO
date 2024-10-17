@@ -47,5 +47,8 @@ public class MapService {
     String encodedOrigin = URLEncoder.encode(origin, StandardCharsets.UTF_8); //Esto es para aceptar cualquier entrada en el origen
     String encodedDestination = URLEncoder.encode(destination, StandardCharsets.UTF_8); //Esto es para aceptar cualquier entrada en el destinto
 
+    //Se construye la url que será enviada a la "request" del http
+    String urlStr = String.format("%s?origins=%s&destinations=%s&key=%s", BASE_URL, encodedOrigin, encodedDestination, API_KEY);
+
     
 }
