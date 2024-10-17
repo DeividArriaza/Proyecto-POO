@@ -42,5 +42,10 @@ public class MapService {
         }
     }
 
+    public RouteInfo getRouteInfo(String origin, String destination) throws Exception { //Se crea el metodo getRouteInfo para devolver un RouteInfo que permita extraer "duration", "distance" y "status" en controlPanel
+    //Se codifican los parámetros de la URL para que así sea legible para la API
+    String encodedOrigin = URLEncoder.encode(origin, StandardCharsets.UTF_8); //Esto es para aceptar cualquier entrada en el origen
+    String encodedDestination = URLEncoder.encode(destination, StandardCharsets.UTF_8); //Esto es para aceptar cualquier entrada en el destinto
+
     
 }
