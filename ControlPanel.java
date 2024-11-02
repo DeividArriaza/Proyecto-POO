@@ -31,6 +31,8 @@ public class ControlPanel extends JFrame {
 
         // Pantalla del menú principal
         JPanel menuPanel = new JPanel();  // Panel para el menú principal
+        menuPanel.setBackground(Color.BLACK); // Cambiar el panel a color negro
+
         menuPanel.setLayout(new GridLayout(3, 1));  // Organiza los botones en 3 filas
         JButton signUpButton = new JButton("Sign Up");  // Botón para "Sign Up"
         JButton signInButton = new JButton("Sign In");  // Botón para "Sign In"
