@@ -21,7 +21,7 @@ public class ControlPanel extends JFrame {
  private void initUI() {
         // Configura la ventana principal
         setTitle("Map Service UVG");  // Título de la ventana
-        setSize(400, 300);                    // Tamaño de la ventana
+        setSize(500, 400);                    // Tamaño de la ventana
         setDefaultCloseOperation(EXIT_ON_CLOSE);  // Comportamiento al cerrar la ventana
         setLocationRelativeTo(null);          // Centra la ventana en la pantalla
 
@@ -57,8 +57,10 @@ public class ControlPanel extends JFrame {
         JPanel signupPanel = new JPanel(new GridLayout(3, 2));  // Panel con 3 filas y 2 columnas
         usernameField = new JTextField();  // Campo de texto para ingresar el nombre de usuario
         passwordField = new JPasswordField();  // Campo de texto para ingresar la contraseña
-        JButton signupConfirmButton = new JButton("Registrar");  // Botón para confirmar el registro
-        JButton signupBackButton = new JButton("Volver");  // Botón para volver al menú principal
+        JButton signupConfirmButton = new JButton("Registrarse");  // Botón para confirmar el registro
+        exitButton.setFont(new Font("Dotum", Font.PLAIN, 11));
+        JButton signupBackButton = new JButton("Regresar");  // Botón para volver al menú principal
+        exitButton.setFont(new Font("Dotum", Font.PLAIN, 11));
 
         // Añadir etiquetas y campos de entrada al panel de "Sign Up"
         signupPanel.add(new JLabel("Username:"));
