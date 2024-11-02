@@ -50,13 +50,13 @@ public class ControlPanel extends JFrame {
         JPanel signupPanel = new JPanel(new GridLayout(3, 2));  // Panel con 3 filas y 2 columnas
         usernameField = new JTextField();  // Campo de texto para ingresar el nombre de usuario
         passwordField = new JPasswordField();  // Campo de texto para ingresar la contraseña
-        JButton signupConfirmButton = new JButton("Registrarse");  // Botón para confirmar el registro
+        JButton signupConfirmButton = new JButton("Registrar");  // Botón para confirmar el registro
         JButton signupBackButton = new JButton("Volver");  // Botón para volver al menú principal
 
         // Añadir etiquetas y campos de entrada al panel de "Sign Up"
-        signupPanel.add(new JLabel("Nombre de usuario:"));
+        signupPanel.add(new JLabel("Username:"));
         signupPanel.add(usernameField);
-        signupPanel.add(new JLabel("Contraseña:"));
+        signupPanel.add(new JLabel("Password:"));
         signupPanel.add(passwordField);
         signupPanel.add(signupConfirmButton);
         signupPanel.add(signupBackButton);
@@ -68,7 +68,7 @@ public class ControlPanel extends JFrame {
 
             // Verificar que ambos campos no estén vacíos
             if (username.isEmpty() || password.isEmpty()) {
-                JOptionPane.showMessageDialog(this, "Por favor ingresa ambos campos.");
+                JOptionPane.showMessageDialog(this, "Por favor ingrese ambos campos.");
             } else {
                 // Guardar los datos en un archivo CSV
                 try (FileWriter writer = new FileWriter("usuarios.csv", true)) {  // "append" para añadir líneas
@@ -93,9 +93,9 @@ public class ControlPanel extends JFrame {
         JButton signinBackButton = new JButton("Volver");  // Botón para volver al menú principal
 
         // Añadir etiquetas y campos de entrada al panel de "Sign In"
-        signinPanel.add(new JLabel("Nombre de usuario:"));
+        signinPanel.add(new JLabel("Username:"));
         signinPanel.add(signinUsernameField);
-        signinPanel.add(new JLabel("Contraseña:"));
+        signinPanel.add(new JLabel("Password:"));
         signinPanel.add(signinPasswordField);
         signinPanel.add(signinConfirmButton);
         signinPanel.add(signinBackButton);
@@ -107,7 +107,7 @@ public class ControlPanel extends JFrame {
 
             // Validar que ambos campos no estén vacíos
             if (username.isEmpty() || password.isEmpty()) {
-                JOptionPane.showMessageDialog(this, "Por favor ingresa ambos campos.");
+                JOptionPane.showMessageDialog(this, "Por favor ingrese ambos campos.");
             } else {
                 // Leer el archivo CSV y comprobar los datos
                 try (BufferedReader reader = new BufferedReader(new FileReader("usuarios.csv"))) {
@@ -131,7 +131,7 @@ public class ControlPanel extends JFrame {
                     if (found) {
                         cardLayout.show(mainPanel, "routePanel");  // Mostrar la pantalla de rutas
                     } else {
-                        JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrectos.");
+                        JOptionPane.showMessageDialog(this, "Username o password incorrectos.");
                     }
 
                 } catch (IOException ex) {
@@ -165,7 +165,7 @@ public class ControlPanel extends JFrame {
 			String destination = destinationField.getText();
 
 			if (origin.isEmpty() || destination.isEmpty()) {
-				JOptionPane.showMessageDialog(this, "Por favor ingresa ambos campos.");
+				JOptionPane.showMessageDialog(this, "Por favor ingrese ambos campos.");
 			} else {
 				try {
 					MapService.RouteInfo routeInfo = mapService.getRouteInfo(origin, destination);
