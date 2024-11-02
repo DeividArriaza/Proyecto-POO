@@ -34,13 +34,13 @@ public class ControlPanel extends JFrame {
 
         menuPanel.setLayout(new GridLayout(3, 1));  // Organiza los botones en 3 filas
         JButton signUpButton = new JButton("Registrar usuario ");
-        signUpButton.setFont(new Font("Dotum", Font.PLAIN, 14)); //
+        signUpButton.setFont(new Font("Dotum", Font.PLAIN, 11)); //
 
         JButton signInButton = new JButton("Iniciar Sesion");
-        signInButton.setFont(new Font("Dotum", Font.PLAIN, 14));
+        signInButton.setFont(new Font("Dotum", Font.PLAIN, 11));
 
         JButton exitButton = new JButton("Salir");
-        exitButton.setFont(new Font("Dotum", Font.PLAIN, 14));
+        exitButton.setFont(new Font("Dotum", Font.PLAIN, 11));
 
 
         // Acciones de los botones del menú principal
