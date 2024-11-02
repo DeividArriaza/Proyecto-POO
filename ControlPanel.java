@@ -63,7 +63,7 @@ public class ControlPanel extends JFrame {
         exitButton.setFont(new Font("Dotum", Font.PLAIN, 11));
 
         // Añadir etiquetas y campos de entrada al panel de "Sign Up"
-        signupPanel.add(new JLabel("Username:"));
+        signupPanel.add(new JLabel("Usuario:"));
         signupPanel.add(usernameField);
         signupPanel.add(new JLabel("Password:"));
         signupPanel.add(passwordField);
