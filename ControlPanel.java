@@ -104,8 +104,9 @@ public class ControlPanel extends JFrame {
         signinBackButton.setFont(new Font("Dotum", Font.PLAIN, 11));
 
         // Añadir etiquetas y campos de entrada al panel de "Sign In"
-        signinPanel.add(new JLabel("Username:"));
+        signinPanel.add(new JLabel("Usuario:"));
         signinPanel.add(signinUsernameField);
+        
         signinPanel.add(new JLabel("Password:"));
         signinPanel.add(signinPasswordField);
         signinPanel.add(signinConfirmButton);
@@ -118,7 +119,7 @@ public class ControlPanel extends JFrame {
 
             // Validar que ambos campos no estén vacíos
             if (username.isEmpty() || password.isEmpty()) {
-                JOptionPane.showMessageDialog(this, "Por favor ingrese ambos campos.");
+                JOptionPane.showMessageDialog(this, "Por favor, ingrese ambos campos.");
             } else {
                 // Leer el archivo CSV y comprobar los datos
                 try (BufferedReader reader = new BufferedReader(new FileReader("usuarios.csv"))) {
@@ -142,12 +143,12 @@ public class ControlPanel extends JFrame {
                     if (found) {
                         cardLayout.show(mainPanel, "routePanel");  // Mostrar la pantalla de rutas
                     } else {
-                        JOptionPane.showMessageDialog(this, "Username o password incorrectos.");
+                        JOptionPane.showMessageDialog(this, "Usuario o password incorrectos.");
                     }
 
                 } catch (IOException ex) {
                     ex.printStackTrace();
-                    JOptionPane.showMessageDialog(this, "Error al leer los datos.");
+                    JOptionPane.showMessageDialog(this, "ERROR: Lectura de datos fallida.");
                 }
             }
         });
@@ -159,11 +160,13 @@ public class ControlPanel extends JFrame {
         JPanel routePanel = new JPanel(new GridLayout(4, 2));  // Panel para ingresar origen y destino
         originField = new JTextField();  // Campo de texto para el origen
         destinationField = new JTextField();  // Campo de texto para el destino
-        JButton routeConfirmButton = new JButton("Obtener Ruta");  // Botón para obtener la ruta
-        JButton routeBackButton = new JButton("Volver");  // Botón para volver al menú principal
+        JButton routeConfirmButton = new JButton("Buscar Ruta");  // Botón para obtener la ruta
+        routeConfirmButton.setFont(new Font("Dotum", Font.PLAIN, 11));
+        JButton routeBackButton = new JButton("Regresar");  // Botón para volver al menú principal
+        routeBackButton.setFont(new Font("Dotum", Font.PLAIN, 11));
 
         // Añadir etiquetas y campos de entrada al panel de rutas
-        routePanel.add(new JLabel("Origen:"));
+        routePanel.add(new JLabel("Su ubicacion:"));
         routePanel.add(originField);
         routePanel.add(new JLabel("Destino:"));
         routePanel.add(destinationField);
@@ -176,7 +179,7 @@ public class ControlPanel extends JFrame {
 			String destination = destinationField.getText();
 
 			if (origin.isEmpty() || destination.isEmpty()) {
-				JOptionPane.showMessageDialog(this, "Por favor ingrese ambos campos.");
+				JOptionPane.showMessageDialog(this, "Por favor, ingrese ambos campos.");
 			} else {
 				try {
 					MapService.RouteInfo routeInfo = mapService.getRouteInfo(origin, destination);
@@ -189,7 +192,7 @@ public class ControlPanel extends JFrame {
 					}
 				} catch (Exception ex) { //Cualquier otro tipo de error 
 					ex.printStackTrace();
-					JOptionPane.showMessageDialog(this, "Error al obtener la ruta: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(this, "ERROR: ruta no encontrada: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		});
