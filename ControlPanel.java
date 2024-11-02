@@ -58,9 +58,9 @@ public class ControlPanel extends JFrame {
         usernameField = new JTextField();  // Campo de texto para ingresar el nombre de usuario
         passwordField = new JPasswordField();  // Campo de texto para ingresar la contraseña
         JButton signupConfirmButton = new JButton("Registrarse");  // Botón para confirmar el registro
-        exitButton.setFont(new Font("Dotum", Font.PLAIN, 11));
+        signupConfirmButton.setFont(new Font("Dotum", Font.PLAIN, 11));
         JButton signupBackButton = new JButton("Regresar");  // Botón para volver al menú principal
-        exitButton.setFont(new Font("Dotum", Font.PLAIN, 11));
+        signupBackButton.setFont(new Font("Dotum", Font.PLAIN, 11));
 
         // Añadir etiquetas y campos de entrada al panel de "Sign Up"
         signupPanel.add(new JLabel("Usuario:"));
@@ -77,16 +77,16 @@ public class ControlPanel extends JFrame {
 
             // Verificar que ambos campos no estén vacíos
             if (username.isEmpty() || password.isEmpty()) {
-                JOptionPane.showMessageDialog(this, "Por favor ingrese ambos campos.");
+                JOptionPane.showMessageDialog(this, "Por favor, ingrese ambos campos.");
             } else {
                 // Guardar los datos en un archivo CSV
                 try (FileWriter writer = new FileWriter("usuarios.csv", true)) {  // "append" para añadir líneas
                     writer.append(username).append(",").append(password).append("\n");
                     writer.flush();
-                    JOptionPane.showMessageDialog(this, "Usuario registrado exitosamente.");
+                    JOptionPane.showMessageDialog(this, "Usuario registrado exitosamente");
                 } catch (IOException ex) {
                     ex.printStackTrace();
-                    JOptionPane.showMessageDialog(this, "Error al guardar los datos.");
+                    JOptionPane.showMessageDialog(this, "ERROR: Datos no guardados.");
                 }
             }
         });
@@ -99,7 +99,9 @@ public class ControlPanel extends JFrame {
         JTextField signinUsernameField = new JTextField();  // Campo de texto para el nombre de usuario
         JPasswordField signinPasswordField = new JPasswordField();  // Campo de texto para la contraseña
         JButton signinConfirmButton = new JButton("Iniciar Sesión");  // Botón para iniciar sesión
-        JButton signinBackButton = new JButton("Volver");  // Botón para volver al menú principal
+        signinConfirmButton.setFont(new Font("Dotum", Font.PLAIN, 11));
+        JButton signinBackButton = new JButton("Regresar");  // Botón para volver al menú principal
+        signinBackButton.setFont(new Font("Dotum", Font.PLAIN, 11));
 
         // Añadir etiquetas y campos de entrada al panel de "Sign In"
         signinPanel.add(new JLabel("Username:"));
