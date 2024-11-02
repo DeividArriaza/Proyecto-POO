@@ -20,7 +20,7 @@ public class ControlPanel extends JFrame {
     }
  private void initUI() {
         // Configura la ventana principal
-        setTitle("Administración de Rutas");  // Título de la ventana
+        setTitle("Map Service UVG");  // Título de la ventana
         setSize(400, 300);                    // Tamaño de la ventana
         setDefaultCloseOperation(EXIT_ON_CLOSE);  // Comportamiento al cerrar la ventana
         setLocationRelativeTo(null);          // Centra la ventana en la pantalla
@@ -31,12 +31,17 @@ public class ControlPanel extends JFrame {
 
         // Pantalla del menú principal
         JPanel menuPanel = new JPanel();  // Panel para el menú principal
-        menuPanel.setBackground(Color.BLACK); // Cambiar el panel a color negro
 
         menuPanel.setLayout(new GridLayout(3, 1));  // Organiza los botones en 3 filas
-        JButton signUpButton = new JButton("Sign Up");  // Botón para "Sign Up"
-        JButton signInButton = new JButton("Sign In");  // Botón para "Sign In"
-        JButton exitButton = new JButton("Salir");      // Botón para salir de la aplicación
+        JButton signUpButton = new JButton("Registrar usuario ");
+        signUpButton.setFont(new Font("Dotum", Font.PLAIN, 14)); //
+
+        JButton signInButton = new JButton("Iniciar Sesion");
+        signInButton.setFont(new Font("Dotum", Font.PLAIN, 14));
+
+        JButton exitButton = new JButton("Salir");
+        exitButton.setFont(new Font("Dotum", Font.PLAIN, 14));
+
 
         // Acciones de los botones del menú principal
         signUpButton.addActionListener(e -> cardLayout.show(mainPanel, "signupPanel"));  // Muestra el panel de "Sign Up"
