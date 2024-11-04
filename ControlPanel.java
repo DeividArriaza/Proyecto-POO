@@ -34,13 +34,13 @@ public class ControlPanel extends JFrame {
 
         menuPanel.setLayout(new GridLayout(3, 1));  // Organiza los botones en 3 filas
         JButton signUpButton = new JButton("Registrar usuario ");
-        signUpButton.setFont(new Font("Dotum", Font.PLAIN, 11)); //
+        signUpButton.setFont(new Font("Dotum", Font.PLAIN, 14)); //
 
         JButton signInButton = new JButton("Iniciar Sesion");
-        signInButton.setFont(new Font("Dotum", Font.PLAIN, 11));
+        signInButton.setFont(new Font("Dotum", Font.PLAIN, 14));
 
         JButton exitButton = new JButton("Salir");
-        exitButton.setFont(new Font("Dotum", Font.PLAIN, 11));
+        exitButton.setFont(new Font("Dotum", Font.PLAIN, 14));
 
 
         // Acciones de los botones del menú principal
@@ -58,9 +58,9 @@ public class ControlPanel extends JFrame {
         usernameField = new JTextField();  // Campo de texto para ingresar el nombre de usuario
         passwordField = new JPasswordField();  // Campo de texto para ingresar la contraseña
         JButton signupConfirmButton = new JButton("Registrarse");  // Botón para confirmar el registro
-        signupConfirmButton.setFont(new Font("Dotum", Font.PLAIN, 11));
+        signupConfirmButton.setFont(new Font("Dotum", Font.PLAIN, 14));
         JButton signupBackButton = new JButton("Regresar");  // Botón para volver al menú principal
-        signupBackButton.setFont(new Font("Dotum", Font.PLAIN, 11));
+        signupBackButton.setFont(new Font("Dotum", Font.PLAIN, 14));
 
         // Añadir etiquetas y campos de entrada al panel de "Sign Up"
         signupPanel.add(new JLabel("Usuario:"));
@@ -99,9 +99,9 @@ public class ControlPanel extends JFrame {
         JTextField signinUsernameField = new JTextField();  // Campo de texto para el nombre de usuario
         JPasswordField signinPasswordField = new JPasswordField();  // Campo de texto para la contraseña
         JButton signinConfirmButton = new JButton("Iniciar Sesión");  // Botón para iniciar sesión
-        signinConfirmButton.setFont(new Font("Dotum", Font.PLAIN, 11));
+        signinConfirmButton.setFont(new Font("Dotum", Font.PLAIN, 14));
         JButton signinBackButton = new JButton("Regresar");  // Botón para volver al menú principal
-        signinBackButton.setFont(new Font("Dotum", Font.PLAIN, 11));
+        signinBackButton.setFont(new Font("Dotum", Font.PLAIN, 14));
 
         // Añadir etiquetas y campos de entrada al panel de "Sign In"
         signinPanel.add(new JLabel("Usuario:"));
@@ -161,9 +161,9 @@ public class ControlPanel extends JFrame {
         originField = new JTextField();  // Campo de texto para el origen
         destinationField = new JTextField();  // Campo de texto para el destino
         JButton routeConfirmButton = new JButton("Buscar Ruta");  // Botón para obtener la ruta
-        routeConfirmButton.setFont(new Font("Dotum", Font.PLAIN, 11));
+        routeConfirmButton.setFont(new Font("Dotum", Font.PLAIN, 14));
         JButton routeBackButton = new JButton("Regresar");  // Botón para volver al menú principal
-        routeBackButton.setFont(new Font("Dotum", Font.PLAIN, 11));
+        routeBackButton.setFont(new Font("Dotum", Font.PLAIN, 14));
 
         // Añadir etiquetas y campos de entrada al panel de rutas
         routePanel.add(new JLabel("Su ubicacion:"));
