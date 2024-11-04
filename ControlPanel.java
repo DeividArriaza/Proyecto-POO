@@ -21,7 +21,7 @@ public class ControlPanel extends JFrame {
  private void initUI() {
         // Configura la ventana principal
         setTitle("Map Service UVG");  // Título de la ventana
-        setSize(500, 400);                    // Tamaño de la ventana
+        setSize(600, 500);                    // Tamaño de la ventana
         setDefaultCloseOperation(EXIT_ON_CLOSE);  // Comportamiento al cerrar la ventana
         setLocationRelativeTo(null);          // Centra la ventana en la pantalla
 
@@ -65,7 +65,7 @@ public class ControlPanel extends JFrame {
         // Añadir etiquetas y campos de entrada al panel de "Sign Up"
         signupPanel.add(new JLabel("Usuario:"));
         signupPanel.add(usernameField);
-        signupPanel.add(new JLabel("Password:"));
+        signupPanel.add(new JLabel("Contraseña:"));
         signupPanel.add(passwordField);
         signupPanel.add(signupConfirmButton);
         signupPanel.add(signupBackButton);
@@ -107,7 +107,7 @@ public class ControlPanel extends JFrame {
         signinPanel.add(new JLabel("Usuario:"));
         signinPanel.add(signinUsernameField);
         
-        signinPanel.add(new JLabel("Password:"));
+        signinPanel.add(new JLabel("Contraseña:"));
         signinPanel.add(signinPasswordField);
         signinPanel.add(signinConfirmButton);
         signinPanel.add(signinBackButton);
@@ -143,7 +143,7 @@ public class ControlPanel extends JFrame {
                     if (found) {
                         cardLayout.show(mainPanel, "routePanel");  // Mostrar la pantalla de rutas
                     } else {
-                        JOptionPane.showMessageDialog(this, "Usuario o password incorrectos.");
+                        JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrectos.");
                     }
 
                 } catch (IOException ex) {
