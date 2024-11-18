@@ -42,9 +42,11 @@ public class ControlPanel extends JFrame {
 
 		JButton signUpButton = new JButton("Registrar usuario");
 		signUpButton.setFont(commonFont);
+		signUpButton.setForeground(Color.WHITE);
 
 		JButton signInButton = new JButton("Iniciar Sesión");
 		signInButton.setFont(commonFont);
+		signInButton.setForeground(Color.WHITE);
 
 		JButton exitButton = new JButton("Salir");
 		exitButton.setFont(commonFont);
